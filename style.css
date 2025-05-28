@@ -1,0 +1,176 @@
+:root {
+  --peach: rgb(255, 205, 178);
+  --blush: rgb(255, 180, 162);
+  --rose: rgb(229, 152, 155);
+  --mauve: rgb(181, 131, 141);
+  --slate: rgb(109, 104, 117);
+  --text-light: #fff;
+  --text-dark: #333;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--peach);
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--mauve);
+  color: var(--text-light);
+  padding: 1rem 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin: 0 0.75rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--peach);
+}
+
+/* Section Styles */
+section {
+  padding: 3rem 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: var(--slate);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--rose);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+h3 {
+  color: var(--mauve);
+  margin-bottom: 0.5rem;
+}
+
+h4, h5 {
+  color: var(--slate);
+}
+
+/* Biography Paragraph */
+.Biography p {
+  margin-bottom: 1rem;
+}
+
+/* Social Links */
+.social-links a {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: var(--mauve);
+}
+
+.social-links a:hover {
+  color: var(--rose);
+}
+
+/* Divider Style */
+.divider {
+  height: 2px;
+  background-color: var(--rose);
+  margin: 3rem 0;
+}
+
+/* Base container styling */
+.work-container, .school-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.work-cube, .school-cube {
+  background-color: var(--blush);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(109, 104, 117, 0.3);
+  padding: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  max-width: 300px;
+  text-align: center;
+}
+
+/* Inner content styling */
+.work h3, .school h3 {
+  color: var(--slate);
+  margin-bottom: 10px;
+}
+
+.work a, .school a {
+  color: var(--rose);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hover effects */
+.work-cube:hover, .school-cube:hover {
+  background-color: var(--mauve);
+  color: var(--text-light);
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(109, 104, 117, 0.4);
+}
+
+.work-cube:hover a, .school-cube:hover a {
+  color: var(--text-light);
+}
+
+/* Skills Icons */
+.skills-container {
+  display: flex;
+  gap: 2rem;
+  font-size: 3rem;
+  color: var(--slate);
+  margin-top: 1rem;
+}
+
+/* Contact Section */
+#contact_me-section a {
+  color: var(--mauve);
+  text-decoration: underline;
+}
+
+#contact_me-section a:hover {
+  color: var(--rose);
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .work-container, .school-container {
+    flex-direction: column;
+  }
+
+  .skills-container {
+    flex-wrap: wrap;
+  }
+}
