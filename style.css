@@ -1,11 +1,20 @@
 :root {
+  --cream: rgba(255, 253, 208, 1);
   --peach: rgb(255, 205, 178);
   --blush: rgb(255, 180, 162);
   --rose: rgb(229, 152, 155);
   --mauve: rgb(181, 131, 141);
-  --slate: rgb(109, 104, 117);
+  --slate: rgba(97, 75, 133, 0.812);
+  --purple: rgba(40, 30, 70, 1);
+  --lavender: rgba(212, 191, 249, 0.95);
+  --lavender-light: rgba(212, 191, 249, 0.75);
+  --lavender-clear: rgba(212, 191, 249, 0.4);
+  --dusty-rose: rgba(240, 180, 190, 0.9);
+  --soft-cream: rgba(255, 248, 230, 0.9);
+  --warm-mist: rgba(240, 240, 255, 0.85);
   --text-light: #fff;
   --text-dark: #333;
+  --header-height: 70px;
 }
 
 /* Reset & Base Styles */
@@ -17,16 +26,43 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  color: var(--text-dark);
-  background-color: var(--peach);
+  color: var(--text-light);
+  background-color: var(--purple);
   line-height: 1.6;
+  padding-top: 40px;
+} 
+
+body::before { /* adds lightness to center drawing eyes inward */
+  content: "";
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  pointer-events: none; 
+  background: radial-gradient(
+    circle at center, 
+    rgba(255, 205, 178, 0.06) 0%,       
+    rgba(40, 30, 70) 50%         
+  );
+  z-index: -1;  
 }
+
 
 /* Header Styles */
 header {
-  background-color: var(--mauve);
   color: var(--text-light);
-  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height); 
+  backdrop-filter: blur(1px);
+
+  
+  display: flex;
+  align-items: center;
+  z-index: 1000;      
 }
 
 nav {
@@ -46,18 +82,55 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--peach);
+  color: var(--warm-mist);
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--lavender-light);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+    color: var(--text-dark);
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--slate);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Section Styles */
 section {
-  padding: 3rem 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 70%, rgba(255, 255, 255, 0.005) 100%);
+  border-radius: 30px;
+  padding: 3rem 2rem;
+  margin: 3rem auto;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  backdrop-filter: blur(3px);
 }
 
 h2 {
-  color: var(--slate);
+  color: var(--text-light);
   font-size: 2rem;
   margin-bottom: 1rem;
   border-bottom: 2px solid var(--rose);
@@ -66,12 +139,12 @@ h2 {
 }
 
 h3 {
-  color: var(--mauve);
+  color: var(--text-light);
   margin-bottom: 0.5rem;
 }
 
 h4, h5 {
-  color: var(--slate);
+  color: var(--text-light);
 }
 
 /* Biography Paragraph */
@@ -83,7 +156,7 @@ h4, h5 {
 .social-links a {
   margin-right: 1rem;
   font-size: 1.5rem;
-  color: var(--mauve);
+  color: var(--text-light);
 }
 
 .social-links a:hover {
@@ -91,6 +164,7 @@ h4, h5 {
 }
 
 /* Divider Style */
+
 .divider {
   height: 2px;
   background-color: var(--rose);
@@ -98,7 +172,7 @@ h4, h5 {
 }
 
 /* Base container styling */
-.work-container, .school-container {
+.project-container, .work-container, .school-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -106,39 +180,41 @@ h4, h5 {
   justify-content: center;
 }
 
-.work-cube, .school-cube {
-  background-color: var(--blush);
+.project-cube, .work-cube, .school-cube {
+  background-color: var(--lavender);
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(109, 104, 117, 0.3);
+  box-shadow: 0 4px 8px rgba(46, 44, 49, 0.3);
   padding: 20px;
   transition: all 0.3s ease;
   cursor: pointer;
   max-width: 300px;
   text-align: center;
+  color: var(--text-dark);
 }
 
+
 /* Inner content styling */
-.work h3, .school h3 {
+.project h3, .work h3, .school h3 {
   color: var(--slate);
   margin-bottom: 10px;
 }
 
-.work a, .school a {
-  color: var(--rose);
+.project a, .work a, .school a {
+  color: var(--text-light);
   text-decoration: none;
   font-weight: bold;
 }
 
 /* Hover effects */
-.work-cube:hover, .school-cube:hover {
-  background-color: var(--mauve);
+.project-cube:hover, .work-cube:hover, .school-cube:hover {
+  background-color: var(--lavender-light);
   color: var(--text-light);
   transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(109, 104, 117, 0.4);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.442);
 }
 
-.work-cube:hover a, .school-cube:hover a {
-  color: var(--text-light);
+.project-cube:hover a, .work-cube:hover a, .school-cube:hover a {
+  color: var(--slate);
 }
 
 /* Skills Icons */
