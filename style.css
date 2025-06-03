@@ -15,7 +15,12 @@
   --header-height: 70px;
 }
 
-                            /* Reset & Base Styles */
+/*Importing Google fonts - inter*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+                           
+
+
+                                    /* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -224,8 +229,8 @@ h4, h5 {
                         /*profile section/
 /*profile photo*/
 .profile-photo {
-  width: 110px;
-  height: 140px;
+  width: 125px;
+  height: 150px;
   object-fit: cover;
   border-radius: 100%;
   overflow: hidden;
@@ -336,7 +341,11 @@ h1 {
 }
 
 
-/* Biography Paragraph */
+                            /* About Me Section */
+#about_me-section {
+  scroll-margin-top: 80px;
+}
+
 .Biography p {
   margin-bottom: 1rem;
 }
@@ -377,57 +386,113 @@ h1 {
 
 
 
-
-                                /* container styling */
+                                /* Projects Styling */
+/* container styling */
 .project-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+  align-items: center;
   justify-content: center;
 }
 
-.project-cube {
-  background-color: var(--lavender);
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(46, 44, 49, 0.3);
-  padding: 20px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  max-width: 300px;
-  text-align: center;
-  color: var(--text-dark);
+.project-item{
+    list-style: none;
 }
 
-
-/* Inner content styling */
-.project h3, .work h3, .school h3 {
-  color: var(--slate);
-  margin-bottom: 10px;
+.project-link{
+    user-select: none;
+    height: 100%;
+    display:block;
+    background: var(--warm-mist);
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px var(--purple);
+    transition: 0.2s ease;
 }
 
-.project a, .work a, .school a {
-  color: var(--text-light);
-  text-decoration: none;
-  font-weight: bold;
+.project-link:hover {
+  transform: scale(1.01, 1.01);;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
-                            
-
-                            /* Hover effects */
-.project-cube:hover, .work-cube:hover, .school-cube:hover {
-  background-color: var(--lavender-light);
-  color: var(--text-light);
-  transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.442);
+.project-link:active{
+    cursor: grabbing;
 }
 
-.project-cube:hover a, .work-cube:hover a, .school-cube:hover a {
-  color: var(--slate);
-}
-
-.work-cube:hover h3, .school-cube:hover h3{
+.project-link:hover .material-symbols-outlined{
     color: var(--text-light);
+    background: var(--purple);
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.badge{
+    color: var(--purple);
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 700px;
+    margin: 16px 0 18px;
+    background: var(--lavender-clear);
+    border-radius: 50px;
+    text-align: center;
+}
+
+.project-description{
+    font-size: 1rem;
+    color: var(--purple);
+    font-weight: 600px;
+    border-bottom: none;
+    padding: 4px 6px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.material-symbols-outlined {
+    height: 35px;
+    width: 35px;
+    color: var(--purple);
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid var(--purple);
+    transform: rotate(-45deg);
+}
+
+.project-container .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.4;
+    background: var(--text-light);
+}
+
+.project-container .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+  .project-container .swiper-button-next,
+  .project-container .swiper-button-prev{
+    color: var(--text-light);
+    margin-top: -35px;
+    width: 10px;       
+    height: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .project-container {
+        margin: 0 10px 25px;
+    }
+    .project-container .swiper-button-next,
+    .project-container .swiper-button-prev{
+        display:none;
+    }
 }
 
 

@@ -6,7 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Elizabeth Heavirland Personal Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        <!--Linking Font Awesome for Icons-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!--Linking Google fonts for forward arrow-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+        <!--Linking swiperJS CSS-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     </head>
     
     <body>
@@ -111,41 +116,61 @@
     <section id="projects-section">
         <h2>Projects</h2>
         <div class = "project-container">
-            <div class="project-cube">
-                <div class="project">
-                    <h3>My Portfolio project</h3>
-                    <a href="INSERT LINK HERE" target="_blank">Personal Portfolio</a>
-                        <!-- add picture <picture>
-                            <source srcset="images/webp/circles-1.webp" type="image/webp">
-                            <img src="images/circles-1.png" alt="Multisource">
-                        </picture> -->
-                </div>
-            </div>
+            <div class="project-cube swiper">
+                    <ul class="project-list swiper-wrapper">
 
-             <div class="project-cube">
-                <div class="project">
-                    <h3>Calculator App</h3>
-                    <a href="INSERT LINK HERE" target="_blank">Calculator App</a>
-                        <!-- add picture <picture>
-                            <source srcset="images/webp/circles-1.webp" type="image/webp">
-                            <img src="images/circles-1.png" alt="Multisource">
-                        </picture> -->
-                </div>
-            </div>
+                        <li class="project-item swiper-slide">
+                            <a href="INSERT LINK HERE" class="project-link" target="_blank">
+                                <img src="images/Avatar Project.png" alt="Project Image" class="project-image">
+                                <p class="badge">Avatar Project</p>
+                                <h2 class="project-description">Cloud Computing Club project using git hub repository to build mental controlled drone.</h2>
+                                <button class="material-symbols-outlined">arrow_forward</button>
+                            </a>
+                        </li>
 
-             <div class="project-cube">
-                <div class="project">
-                    <h3>Avatar Project</h3>
-                    <a href="INSERT LINK HERE" target="_blank">Avatar Projeft</a>
-                        <!-- add picture <picture>
-                            <source srcset="images/webp/circles-1.webp" type="image/webp">
-                            <img src="images/circles-1.png" alt="Multisource">
-                        </picture> -->
-                </div>
-            </div>
+                        <li class="project-item swiper-slide">
+                            <a href="https://expense-tracker-670.web.app/" class="project-link" target="_blank">
+                                <img src="images/Expense Tracker.png" alt="Project Image" class="project-image">
+                                <p class="badge">Expense Tracker</p>
+                                <h2 class="project-description">Group project for class to develop an expense tracker and test it.</h2>
+                                <button class="material-symbols-outlined">arrow_forward</button>
+                            </a>
+                        </li>
 
+                        <li class="project-item swiper-slide">
+                            <a href="INSERT LINK HERE" class="project-link" target="_blank">
+                                <img src="images/Calculator .png" alt="Project Image" class="project-image">
+                                <p class="badge">calculator App</p>
+                                <h2 class="project-description">This is a working calculator utilizing a lot of thisngs</h2>
+                                <button class="material-symbols-outlined">arrow_forward</button>
+                            </a>
+                        </li>
+                        
+                        <li class="project-item swiper-slide">
+                            <a href="INSERT LINK HERE" class="project-link" target="_blank">
+                                <img src="images/Personal portfolio.png" alt="Project Image" class="project-image">
+                                <p class="badge">Personal Portfolio</p>
+                                <h2 class="project-description">This project is my personal portfolio, utilizing HTML and CSS.</h2>
+                                <button class="material-symbols-outlined">arrow_forward</button>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+                
+            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+        </div>
+
+            <!--Linking SwiperJS script-->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        
+            <!--Linking Custom Script-->
+            <script src="script.js"></script>
         </div>
     </section>
+
+
     <div class="divider"></div>    
 
 
