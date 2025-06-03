@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Elizabeth Heavirland Personal Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
     
     <body>
@@ -14,11 +15,6 @@
         <nav>
             <div class="left">
                 <a href="#homePage-section">Elizabeth</a>
-            </div>
-            <div class="middle">
-                <a href="#linkedIn-link">Linked In</a>
-                <a href="#gitHub-link">GitHub</a>
-                <a href="#resume-link">Resume</a>
             </div>
             <div class="right">
                     <div class="dropdown">
@@ -41,32 +37,45 @@
     <!-- <section id="flower petal game"></section> -->
     <!-- https://fontawesome.com/kits/new is where she got her icons-->
 
+    <section id="homePage-section">
+        <div class="home-container">
+            <div class="profile-header">
+                <img src="images/headshot.png" alt="Elizabeth Heavirland" class="profile-photo">
+                
+                <div class="profile-text">
+                    <p class="name">Elizabeth Heavirland</p>
+                    <p class="location">Minneapolis, MN</p>
+                </div>
+            </div>
+
+            <h1>Software Engineer</h1>
+
+            <div class="connect-links">
+            <a href="https://www.linkedin.com/in/elizabeth-heavirland" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/EHeav" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://example.com/your-resume.pdf" target="_blank" aria-label="Resume">
+                <i class="fa-regular fa-file-lines"></i><!--add actual resume here-->
+            </a>
+            </div>
+        </div>
+    </section>
+    
+
     <section id="about_me-section">
-        <h2>Elizabeth Heavirland</h2>
-        <h4>Software Engineer</h4>
-    <!--   <div class="headshot">
-            <picture>
-                <source srcset="images/webp/headshot.webp" type="image/webp">
-                <img src="images/headshot.png" alt="headshot">
-            </picture>
-        </div> -->
         <div class="Biography">
             <p>
-                I'm Elizabeth, I am a current student at Saint Cloud State University (SCSU) Getting a masters degree 
+                <strong>Hello World! I'm Elizabeth.</strong><br><br>
+                Current student at Saint Cloud State University (SCSU) persuing a masters degree 
                 in software engineering. I have a unique background in management and sales and a strong willingness to learn new things! 
             </p>
             <br>
             <p>
                 Beyond my experiences and education. I have a fond love for travel, love to try new foods, and am an avid reader!
             </p>
-        </div>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/elizabeth-heavirland" target="_blank">
-                <i class="linkedin"></i>
-            </a>
-            <a href="https://github.com/EHeav" target="_blank">
-                <i class="github"></i>
-            </a>
         </div>
     </section>
   
@@ -93,69 +102,104 @@
     <section id="leet_code-section">
         <h2>Leet Code</h2>
     </section> -->
-    
-    <div class="divider"></div>
 
     <section id="skills-section">
         <h2>Skills</h2>
         <div class="skills-container">
             <i class="fa-brands fa-python"></i>
             <i class="fa-brands fa-java"></i>
-            <!--add more skills?-->
+            <i class="fa-brands fa-js"></i>
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
         </div>
     </section>
 
-    <div class="divider"></div>
 
-    <section id="experience-section">
-        <h2>Experience</h2>   
-        
-        <!-- subclass work -->
-        <div class = "work-container">
-            <div class="work-cube">
-                <div class="work">
-                    <h3>Sales District Leader</h3>
-                    <a href="https://www.multisourcemfg.com/" target="_blank">Multisource Manufacturing</a>
-                        <!-- add picture <picture>
-                            <source srcset="images/webp/circles-1.webp" type="image/webp">
-                            <img src="images/circles-1.png" alt="Multisource">
-                        </picture> -->
+
+
+
+
+
+
+
+ <section id="experience-section">
+  <h2>Experience</h2><br>
+
+  <!-- Radio buttons -->
+    <input type="radio" id="education-tab" name="tabs" checked>
+    <label for="education-tab">Education</label>
+
+    <input type="radio" id="work-tab" name="tabs">
+    <label for="work-tab">Work</label>
+
+       
+        <!-- Content -->
+        <div class="tab-content" id="work-content">
+            <div class="work-container">
+                <div class="work-cube">
+                <h3>Job Title</h3>
+                <p><strong>Location:</strong> City, State</p>
+                <p><strong>Dates:</strong> Start - End</p>
+                <p class="description">Short description of responsibilities and achievements in this role.</p>
                 </div>
+
+                <div class="work-cube">
+                <h3>Job Title</h3>
+                <p><strong>Location:</strong> City, State</p>
+                <p><strong>Dates:</strong> Start - End</p>
+                <p class="description">Short description of responsibilities and achievements in this role.</p>
+                </div>
+                
+                <div class="work-cube">
+                <h3>Job Title</h3>
+                <p><strong>Location:</strong> City, State</p>
+                <p><strong>Dates:</strong> Start - End</p>
+                <p class="description">Short description of responsibilities and achievements in this role.</p>
+                
+                </div><div class="work-cube">
+                <h3>Job Title</h3>
+                <p><strong>Location:</strong> City, State</p>
+                <p><strong>Dates:</strong> Start - End</p>
+                <p class="description">Short description of responsibilities and achievements in this role.</p>
+                
+                </div><div class="work-cube">
+                <h3>Job Title</h3>
+                <p><strong>Location:</strong> City, State</p>
+                <p><strong>Dates:</strong> Start - End</p>
+                <p class="description">Short description of responsibilities and achievements in this role.</p>
+                </div>
+
+            <!-- Add more work-cube divs as needed -->
             </div>
         </div>
 
-        <!-- subclass school -->  
-        <div class="school-container"> 
-            <div class="school-cube">    
-                <div class="school">
-                    <h3>Masters of Science</h3>
-                    <h5>Software Engineering</h5>
-                    <a href="https://www.stcloudstate.edu/programs/software-engineering/default.aspx" target="_blank">Saint Cloud State University</a>
-                        <!-- add picture <picture>
-                            <source srcset="images/webp/circles-1.webp" type="image/webp">
-                            <img src="images/circles-1.png" alt="Multisource">
-                        </picture> -->
+        <div class="tab-content" id="education-content">
+            <div class="school-container">
+                <div class="school-cube">
+                <h3>Degree Title</h3>
+                <p><strong>Location:</strong> University Name, City, State</p>
+                <p><strong>Dates:</strong> Start - End</p>
+                <p class="description">Short description of the program, coursework, or specialization.</p>
                 </div>
-            </div>
 
-           <div class="school-cube">  
-                <div class="school">
-                    <h3>Bachelors of Science</h3>
-                    <a href="https://www.stcloudstate.edu/programs/management/default.aspx" target="_blank"><h4>Business Management</h4></a>
-                    <a href="https://www.stcloudstate.edu/programs/human-resource-management/default.aspx" target="_blank">Human Resources Concentration</a>
-                        <!-- add picture <picture>
-                            <source srcset="images/webp/circles-1.webp" type="image/webp">
-                            <img src="images/circles-1.png" alt="Multisource">
-                        </picture> -->
+                <div class="school-cube">
+                <h3>Degree Title</h3>
+                <p><strong>Location:</strong> University Name, City, State</p>
+                <p><strong>Dates:</strong> Start - End</p>
+                <p class="description">Short description of the program, coursework, or specialization.</p>
                 </div>
+
+                <!-- Add more school-cube divs as needed -->
+            </div>
         </div>
     </section>
 
-    <!--<div class="divider"></div>
 
+    <!--
     <section id="blog_code-section">
         <h2>Blog</h2>
-    </section> -->
+    </section>  -->
+
 
         <!-- Contact Section -->
     <section id="contact_me-section">
