@@ -3,7 +3,7 @@ This is a personal web page that i am building from scratch
 
 To add:
   --blog section
-  --picture of self
-  --toggle between experience and schooling instead of blocks
+  --leet code section
+  --correct info for projects
   --photos of projects
-  --skills icons
+  --card slider for projects utilizing this framework "https://www.youtube.com/watch?v=VUtJ7FWCfZA&list=PLpwngcHZlPae68z_mLFNfbJFIJVJ_Zcx2&index=1"
