@@ -4,12 +4,14 @@
   --blush: rgb(255, 180, 162);
   --mauve: rgb(181, 131, 141);
   --slate: rgba(97, 75, 133, 0.812);
+  --purple-medium: rgba(69, 53, 102, 0.9);
   --purple: rgba(40, 30, 70, 1);
   --lavender: rgba(212, 191, 249, 0.95);
   --lavender-light: rgba(212, 191, 249, 0.75);
   --lavender-clear: rgba(212, 191, 249, 0.4);
   --soft-cream: rgba(255, 248, 230, 0.9);
   --warm-mist: rgba(240, 240, 255, 0.85);
+  --warm-mist-clear: rgba(240, 240, 255, 0.4);
   --text-light: #fff;
   --text-dark: #333;
   --header-height: 70px;
@@ -355,23 +357,27 @@ h1 {
 
 .skills-container {
   display: flex;
-  gap: 20px;  
-  justify-content: center; 
+  flex-wrap: wrap;   /* <-- allow items to wrap onto new lines */
+  gap: 20px;
+  justify-content: center;
 }
 
 .skill-item {
   display: flex;
-  flex-direction: column;  
-  align-items: center;     
-  font-size: 5rem;         
-  color: var(--lavender-clear);    
+  flex-direction: column;
+  align-items: center;
+  font-size: 5rem;
+  color: var(--text-light);
+  flex: 1 0 80px;   
+  max-width: 100px; 
 }
 
 .skill-label {
-  margin-top: 8px;         
+  margin-top: 8px;
   font-size: 1rem;
   color: var(--lavender-clear);
 }
+
 
 
 
@@ -412,7 +418,7 @@ h1 {
 }
 
 .project-link:hover {
-  transform: scale(1.01, 1.01);;
+  transform: scale(1.01, 1.01);
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
@@ -498,17 +504,6 @@ h1 {
 
 
 
-                                /* Skills Icons */
-.skills-container {
-  display: flex;
-  gap: 2rem;
-  font-size: 3rem;
-  color: var(--slate);
-  margin-top: 1rem;
-}
-
-
-
 
                                 /* Experience Tabs */
 #experience-section input[type="radio"] {
@@ -557,8 +552,8 @@ display: block;
 }
 
 .work-cube, .school-cube {
-  background: var(--warm-mist);
-  color: var(--text-dark);
+  background: var(--warm-mist-clear);
+  color: var(--purple-medium);
   padding: 10px;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -569,13 +564,13 @@ display: block;
 }
 
 .work-cube:hover, .school-cube:hover {
-  transform: translateY(-5px);
+  transform: scale(1.01, 1.01);
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 .work-cube h3, .school-cube h3 {
-  color: var(--purple);
-  border-bottom: 2px solid var(--mauve);
+  color: var(--soft-cream);
+  border-bottom: 2px solid var(--lavender-light);
   padding-bottom: 5px;
   margin-bottom: 10px;
 }
