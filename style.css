@@ -442,7 +442,7 @@ h1 {
 .badge{
     color: var(--purple);
     padding: 8px 16px;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     font-weight: 700px;
     margin: 16px 0 18px;
     background: var(--lavender-clear);
@@ -451,7 +451,7 @@ h1 {
 }
 
 .project-description{
-    font-size: 1rem;
+    font-size: .9rem;
     color: var(--purple);
     font-weight: 600px;
     border-bottom: none;
