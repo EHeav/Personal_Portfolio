@@ -443,7 +443,7 @@ h1 {
     color: var(--purple);
     padding: 8px 16px;
     font-size: 1.1rem;
-    font-weight: 700px;
+    font-weight: 650;
     margin: 16px 0 18px;
     background: var(--lavender-clear);
     border-radius: 50px;
@@ -453,7 +453,7 @@ h1 {
 .project-description{
     font-size: .9rem;
     color: var(--purple);
-    font-weight: 600px;
+    font-weight: normal;
     border-bottom: none;
     padding: 4px 6px;
     border-radius: 5px;
